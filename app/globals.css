@@ -2,22 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply bg-gradient-to-r from-gradient1-300 via-gradient2-300 to-gradient3-300 dark:bg-slate-800;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  h1 {
+    @apply text-4xl font-semibold dark:text-white;
+  }
+
+  h2 {
+    @apply text-xl font-medium;
+  }
+
+  .video {
+    /* Correcting the Tailwind classes for positioning */
+    @apply absolute top-0 w-full h-full object-cover -z-10; /* Use -z-10 for negative z-index */
+  }
 }
 
 @layer utilities {

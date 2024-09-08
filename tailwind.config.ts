@@ -9,8 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        red: {
+          650: "#dc2626",
+        },
+        gradient1: {
+          300: "#ffe8e8",
+        },
+        gradient2: {
+          300: "#ffd1d1",
+        },
+        gradient3: {
+          300: "#ffffff",
+        },
       },
     },
   },
